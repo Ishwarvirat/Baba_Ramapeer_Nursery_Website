@@ -45,11 +45,17 @@
 
   <style>
     .hero-overlay {
-      background: linear-gradient(90deg, rgba(6, 38, 18, 0.94) 0%, rgba(14, 68, 34, 0.85) 45%, rgba(0, 0, 0, 0.4) 100%);
+      background: linear-gradient(90deg, rgba(5, 49, 30, 0.98) 0%, rgba(5, 49, 30, 0.94) 39%, rgba(5, 49, 30, 0.48) 64%, rgba(5, 49, 30, 0.04) 100%);
+    }
+    .hero-photo-frame {
+      clip-path: ellipse(78% 78% at 66% 43%);
     }
     @media (max-width: 768px) {
       .hero-overlay {
-        background: linear-gradient(180deg, rgba(6, 38, 18, 0.96) 0%, rgba(14, 68, 34, 0.9) 65%, rgba(0, 0, 0, 0.7) 100%);
+        background: linear-gradient(90deg, rgba(5, 49, 30, 0.98) 0%, rgba(5, 49, 30, 0.9) 58%, rgba(5, 49, 30, 0.38) 100%);
+      }
+      .hero-photo-frame {
+        clip-path: ellipse(77% 73% at 70% 68%);
       }
     }
     .badge-tilt {
@@ -61,104 +67,77 @@
     }
   </style>
 </head>
-<body class="bg-[#fbfdfa] text-gray-800 antialiased font-sans selection:bg-brand-600 selection:text-white">
-
-  <!-- ================= 1. TOP INFORMATION BAR ================= -->
-  
-      
-
-      <!-- Contact details & Timings -->
-      <div class="flex items-center flex-wrap gap-4 text-xs sm:text-sm">
-      
-        </a>
-        <span class="hidden md:inline text-white/30">|</span>
-        
-        </a>
-        <span class="hidden sm:inline text-white/30">|</span>
-        <div class="flex items-center gap-2">
-          
-          
-        </div>
-      </div>
-    </div>
-  </aside>
+<body class="bg-[#e8efe5] text-gray-800 antialiased font-sans selection:bg-brand-600 selection:text-white">
 
   <!-- ================= 2. MAIN NAVBAR ================= -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+  <header class="sticky top-0 z-50 w-full bg-[#0b3f2b] text-white border-b border-white/10 shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20">
+      <div class="flex justify-between items-center min-h-20 py-2 gap-3">
         
         <!-- Nursery Logo -->
-        <a href="#home" class="flex items-center gap-3 group">
-          <div class="w-12 h-12 rounded-full border-2 border-brand-700 bg-emerald-50 flex items-center justify-center p-2 shadow-sm group-hover:scale-105 transition">
-            <!-- Plant leaf logo svg -->
-            <svg viewBox="0 0 48 48" class="w-full h-full text-brand-700" fill="currentColor">
-              <path d="M24 4C13 4 4 13 4 24c0 9 6 16.5 14.5 18.9.2-.8.5-1.9.9-3.2C12.5 37 8 31 8 24 8 15.2 15.2 8 24 8c7.3 0 13.5 5 15.3 11.8 1.4-.4 2.8-.7 4.2-.8C41.3 10.5 33.4 4 24 4z"/>
-              <path d="M24 12c-6.6 0-12 5.4-12 12 0 4.2 2.2 7.9 5.5 10 .8-2.6 2-5.4 3.7-8 1.7-2.6 3.8-4.8 6.3-6.5-1.1-4.3-1.8-6.5-3.5-7.5zm11.2 5.5c-4.2 2.2-7.5 5.7-9.5 9.5-2 3.8-2.7 7.7-2.7 11.5 5.5-.3 10.4-2.8 13.7-6.8 1.4-1.7 2.3-3.7 2.8-5.7-1.3-3.2-2.7-6-4.3-8.5z" opacity="0.9"/>
-            </svg>
-          </div>
-          <div class="flex flex-col">
-            <span class="text-xl sm:text-2xl font-black tracking-tight text-gray-900 leading-none">
-              BABA RAMAPEER
-            </span>
-            <div class="flex items-center gap-1.5 mt-0.5">
-              <span class="h-[1.5px] w-4 bg-brand-600"></span>
-              <span class="text-xs sm:text-sm font-bold tracking-widest text-brand-700 uppercase">NURSERY</span>
-              <span class="h-[1.5px] w-4 bg-brand-600"></span>
-            </div>
-            <span class="text-[11px] text-gray-500 font-medium">हरियाली से खुशहाली</span>
-          </div>
+        <a href="#home" class="flex items-center gap-2.5 sm:gap-3 shrink-0 group">
+          <img src="assets/baba-ramapeer-nursery-logo.jpg" alt="बाबा रामापीर नर्सरी लोगो" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover shadow-sm ring-2 ring-emerald-100 group-hover:scale-105 transition">
+          <span class="flex flex-col leading-tight">
+            <span class="text-sm sm:text-base font-extrabold tracking-tight text-white">बाबा रामापीर</span>
+            <span class="text-[11px] sm:text-xs font-bold tracking-[0.14em] text-emerald-300 uppercase">NURSERY</span>
+            <span class="hidden sm:block text-[10px] text-emerald-100/70">चौहटन, बाड़मेर</span>
+          </span>
         </a>
 
         <!-- Desktop Links -->
-        <nav class="hidden lg:flex items-center space-x-7 text-gray-700 font-semibold text-[15px]">
-          <a href="#home" class="text-white bg-brand-700 px-4 py-1.5 rounded-full hover:bg-brand-800 transition shadow-sm">Home</a>
-          <a href="#about" class="hover:text-brand-700 transition">About Us</a>
+        <nav aria-label="मुख्य नेविगेशन" class="hidden xl:flex items-center gap-4 text-white/85 font-semibold text-sm">
+          <a href="#home" class="text-emerald-300 font-bold hover:text-white transition">Home</a>
+          <a href="#about" class="hover:text-emerald-300 transition whitespace-nowrap">About Us</a>
           
           <!-- Dropdown -->
           <div class="relative group cursor-pointer py-2">
-            <span class="hover:text-brand-700 transition flex items-center gap-1">
-              Plants <i class="fa-solid fa-chevron-down text-xs ml-0.5 text-gray-400 group-hover:rotate-180 transition"></i>
+            <span class="hover:text-emerald-300 transition flex items-center gap-1 whitespace-nowrap">
+              Plants <i class="fa-solid fa-chevron-down text-xs ml-0.5 text-white/50 group-hover:rotate-180 transition"></i>
             </span>
-            <div class="absolute top-full left-0 hidden group-hover:block w-52 bg-white border border-gray-100 rounded-xl shadow-xl py-2 z-50 animate-in fade-in">
-              <a href="#fruit-varieties" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-brand-700 font-medium">🍎 फलदार पौधे (Fruits)</a>
-              <a href="#flower-varieties" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-brand-700 font-medium">🌸 फूलदार पौधे (Flowers)</a>
-              <a href="#shade-varieties" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-brand-700 font-medium">🌳 छायादार पौधे (Shade)</a>
-              <a href="#showpiece-varieties" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-brand-700 font-medium">🪴 शोपीस पौधे (Showpiece)</a>
-              <a href="#categories" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-brand-700 font-medium">🌿 औषधीय पौधे (Medicinal)</a>
-              <a href="#categories" class="block px-4 py-2 text-sm text-gray-700 hover:bg-emerald-50 hover:text-brand-700 font-medium">🪴 इनडोर पौधे (Indoor)</a>
+            <div class="absolute top-full left-0 hidden group-hover:block group-focus-within:block w-52 bg-[#0b3f2b] border border-white/10 rounded-xl shadow-xl py-2 z-50 animate-in fade-in">
+              <a href="#fruit-varieties" class="block px-4 py-2 text-sm text-white/85 hover:bg-white/10 hover:text-emerald-300 font-medium">🍎 फलदार पौधे (Fruits)</a>
+              <a href="#flower-varieties" class="block px-4 py-2 text-sm text-white/85 hover:bg-white/10 hover:text-emerald-300 font-medium">🌸 फूलदार पौधे (Flowers)</a>
+              <a href="#shade-varieties" class="block px-4 py-2 text-sm text-white/85 hover:bg-white/10 hover:text-emerald-300 font-medium">🌳 छायादार पौधे (Shade)</a>
+              <a href="#showpiece-varieties" class="block px-4 py-2 text-sm text-white/85 hover:bg-white/10 hover:text-emerald-300 font-medium">🪴 शोपीस पौधे (Showpiece)</a>
+              <a href="#categories" class="block px-4 py-2 text-sm text-white/85 hover:bg-white/10 hover:text-emerald-300 font-medium">🌿 औषधीय पौधे (Medicinal)</a>
+              <a href="#categories" class="block px-4 py-2 text-sm text-white/85 hover:bg-white/10 hover:text-emerald-300 font-medium">🪴 इनडोर पौधे (Indoor)</a>
             </div>
           </div>
 
-          <a href="#gallery" class="hover:text-brand-700 transition">Gallery</a>
-          <a href="#popular" class="hover:text-brand-700 transition">Blog</a>
-          <a href="#contact" class="hover:text-brand-700 transition">Contact</a>
+          <a href="#gallery" class="hover:text-emerald-300 transition">Gallery</a>
+          <a href="#reviews" class="hover:text-emerald-300 transition whitespace-nowrap">Reviews & Rating</a>
+          <a href="#medicine-info" class="hover:text-emerald-300 transition whitespace-nowrap">दवाई</a>
+          <a href="#popular" class="hover:text-emerald-300 transition">Blog</a>
+          <a href="#contact" class="hover:text-emerald-300 transition">Contact</a>
         </nav>
 
         <!-- Top Actions CTA -->
-        <div class="hidden md:flex items-center space-x-3">
-          <button onclick="toggleSearchModal()" aria-label="Search nursery plants" class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-brand-700 hover:border-brand-600 transition">
+        <div class="hidden xl:flex items-center gap-2">
+          <button onclick="toggleSearchModal()" aria-label="Search nursery plants" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-emerald-300 transition">
             <i class="fa-solid fa-magnifying-glass text-sm"></i>
           </button>
           
-          <a href="https://wa.me/918078667694?text=नमस्ते%20बाबा%20रामापीर%20नर्सरी,%20मुझे%20पौधों%20की%20जानकारी%20चाहिए।" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-4 py-2.5 rounded-full text-sm font-semibold hover:bg-[#1faa4f] transition shadow-sm hover:shadow-md">
+          <a href="https://wa.me/918078667694?text=नमस्ते%20बाबा%20रामापीर%20नर्सरी,%20मुझे%20पौधों%20की%20जानकारी%20चाहिए।" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#25D366] text-white px-3.5 py-2.5 rounded-full text-sm font-semibold hover:bg-[#1faa4f] transition shadow-sm hover:shadow-md">
             <i class="fa-brands fa-whatsapp text-lg"></i>
             <span>WhatsApp</span>
           </a>
 
-          <a href="tel:8078667694" class="flex items-center gap-2 bg-[#062612] text-white px-4 py-2.5 rounded-full text-sm font-semibold hover:bg-brand-900 transition shadow-sm hover:shadow-md">
+          <a href="tel:8078667694" class="flex items-center gap-2 bg-white/10 text-white border border-white/25 px-3.5 py-2.5 rounded-full text-sm font-semibold hover:bg-white/20 transition">
             <i class="fa-solid fa-phone text-xs"></i>
             <span>Call Now</span>
           </a>
         </div>
 
         <!-- Mobile Hamburger button -->
-        <div class="flex items-center gap-2 lg:hidden">
-          <a href="https://wa.me/918078667694" class="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center text-lg" aria-label="WhatsApp">
+        <div class="flex items-center gap-2 xl:hidden">
+          <button onclick="toggleSearchModal()" aria-label="पौधे खोजें" class="hidden sm:flex w-9 h-9 rounded-full border border-white/20 text-white/80 items-center justify-center hover:text-white hover:border-emerald-300 transition">
+            <i class="fa-solid fa-magnifying-glass text-sm"></i>
+          </button>
+          <a href="https://wa.me/918078667694" class="w-9 h-9 rounded-full bg-[#25D366] text-white flex items-center justify-center text-lg shadow-sm hover:bg-[#1faa4f] transition" aria-label="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
-          <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="p-2 rounded-lg text-gray-700 hover:bg-gray-100" aria-label="Toggle menu">
-            <i class="fa-solid fa-bars text-2xl"></i>
+          <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="w-9 h-9 rounded-full border border-white/20 text-white hover:bg-white/10 flex items-center justify-center transition" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars text-lg"></i>
           </button>
         </div>
 
@@ -166,18 +145,20 @@
     </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 bg-white px-4 pt-3 pb-6 space-y-2.5 shadow-lg">
-      <a href="#home" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg bg-emerald-50 text-brand-700 font-bold">Home</a>
-      <a href="#about" onclick="toggleMobileMenu()" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">About Us</a>
-      <a href="#varieties" onclick="toggleMobileMenu()" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">All Plants (पौधे)</a>
-      <a href="#gallery" onclick="toggleMobileMenu()" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Gallery</a>
-      <a href="#popular" onclick="toggleMobileMenu()" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Popular Plants</a>
-      <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg font-medium">Contact Us</a>
+    <div id="mobileMenu" class="hidden xl:hidden border-t border-white/10 bg-[#0b3f2b] px-4 pt-3 pb-6 space-y-2.5 rounded-b-2xl shadow-lg">
+      <a href="#home" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg bg-white/10 text-emerald-300 font-bold">Home</a>
+      <a href="#about" onclick="toggleMobileMenu()" class="block px-3 py-2 text-white/85 hover:bg-white/10 rounded-lg font-medium">About Us</a>
+      <a href="#varieties" onclick="toggleMobileMenu()" class="block px-3 py-2 text-white/85 hover:bg-white/10 rounded-lg font-medium">All Plants (पौधे)</a>
+      <a href="#gallery" onclick="toggleMobileMenu()" class="block px-3 py-2 text-white/85 hover:bg-white/10 rounded-lg font-medium">Gallery</a>
+      <a href="#reviews" onclick="toggleMobileMenu()" class="block px-3 py-2 text-white/85 hover:bg-white/10 rounded-lg font-medium">Reviews & Rating</a>
+      <a href="#medicine-info" onclick="toggleMobileMenu()" class="block px-3 py-2 text-white/85 hover:bg-white/10 rounded-lg font-medium">दवाई जानकारी</a>
+      <a href="#popular" onclick="toggleMobileMenu()" class="block px-3 py-2 text-white/85 hover:bg-white/10 rounded-lg font-medium">Popular Plants</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-2 text-white/85 hover:bg-white/10 rounded-lg font-medium">Contact Us</a>
       <div class="pt-2 flex flex-col gap-2">
-        <button onclick="toggleMobileMenu(); toggleSearchModal();" class="flex items-center justify-center gap-2 border border-gray-300 py-2.5 rounded-xl font-semibold text-gray-700">
+        <button onclick="toggleMobileMenu(); toggleSearchModal();" class="flex items-center justify-center gap-2 border border-white/20 py-2.5 rounded-xl font-semibold text-white">
           <i class="fa-solid fa-magnifying-glass"></i> पौधे खोजें
         </button>
-        <a href="tel:8078667694" class="flex items-center justify-center gap-2 bg-[#062612] text-white py-2.5 rounded-xl font-semibold">
+        <a href="tel:8078667694" class="flex items-center justify-center gap-2 bg-white/10 text-white py-2.5 rounded-xl font-semibold">
           <i class="fa-solid fa-phone text-xs"></i> 8078667694 पर कॉल करें
         </a>
       </div>
@@ -185,92 +166,88 @@
   </header>
 
   <!-- ================= 3. HERO BANNER ================= -->
-  <section id="home" class="relative min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden">
-    <!-- Strictly Realistic Plant Nursery & Greenhouse Backdrop -->
-    <div class="absolute inset-0 z-0">
-      <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=2000&auto=format&fit=crop" 
-           alt="Baba Ramapeer Nursery green garden and plants greenhouse" 
-           class="w-full h-full object-cover object-center">
+  <section id="home" class="relative w-full min-h-[600px] sm:min-h-[640px] lg:min-h-[620px] flex items-center overflow-hidden bg-[#0b3f2b] text-white shadow-xl">
+    <div class="absolute inset-0 z-0 bg-[#0b3f2b]">
+      <div class="hero-photo-frame absolute right-0 top-0 h-[74%] w-full sm:w-[66%] lg:w-[58%] overflow-hidden bg-[#f2f2ec]">
+        <img id="heroSlideImage" src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=2000&auto=format&fit=crop"
+             alt="सजावटी और इंडोर पौधे" fetchpriority="high"
+             class="w-full h-full object-cover object-center transition-opacity duration-500">
+      </div>
       <div class="absolute inset-0 hero-overlay"></div>
     </div>
 
-    <!-- Navigation Arrows Overlay (From design) -->
-    <div class="hidden lg:flex absolute right-8 top-1/2 -translate-y-1/2 z-20 flex-col gap-2">
-      <button onclick="scrollSection('categories')" class="w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-sm flex items-center justify-center transition border border-white/20">
+    <div class="absolute right-4 sm:right-7 lg:right-10 top-[20%] sm:top-1/2 -translate-y-1/2 z-20 flex gap-2 pointer-events-none">
+      <button type="button" onclick="changeHeroSlide(-1)" aria-label="पिछली तस्वीर" class="w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-sm flex items-center justify-center transition border border-white/30 pointer-events-auto">
         <i class="fa-solid fa-chevron-left text-sm"></i>
       </button>
-      <button onclick="scrollSection('popular')" class="w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-sm flex items-center justify-center transition border border-white/20">
+      <button type="button" onclick="changeHeroSlide(1)" aria-label="अगली तस्वीर" class="w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-sm flex items-center justify-center transition border border-white/30 pointer-events-auto">
         <i class="fa-solid fa-chevron-right text-sm"></i>
       </button>
     </div>
+    <div id="heroSlideDots" aria-label="Slideshow तस्वीरें" class="absolute right-1/2 translate-x-1/2 sm:right-[34%] sm:translate-x-1/2 top-[12%] lg:right-[29%] lg:top-[71%] z-20 h-10 flex items-center gap-2">
+    </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
+    <div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 pt-10 pb-32 sm:pt-12 sm:pb-40 lg:pt-12 lg:pb-28 w-full">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
         <!-- Text Column -->
-        <div class="lg:col-span-8 text-white space-y-4">
-          <div class="inline-block">
-            <span class="font-hand text-3xl sm:text-4xl lg:text-5xl text-emerald-300 font-semibold tracking-wide">
-              Welcome to
-            </span>
+        <div class="lg:col-span-7 text-white space-y-4">
+          <div class="inline-flex items-center gap-2 text-emerald-300 text-xs sm:text-sm font-bold tracking-[0.18em] uppercase">
+            <span class="w-7 h-px bg-emerald-300"></span>
+            हरियाली से खुशहाली
           </div>
 
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight uppercase leading-tight drop-shadow-md">
-            BABA RAMAPEER <br class="hidden sm:inline">
-            <span class="text-emerald-400">NURSERY</span>
+          <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-wide uppercase leading-[1.12] drop-shadow-md">
+            हरियाली, <br class="hidden sm:inline">
+            <span class="text-emerald-300">हर घर में</span>
           </h1>
 
-          <p class="text-xl sm:text-2xl font-bold text-gray-100 tracking-wide font-sans">
-            हर पौधा, एक बेहतर कल के लिए...
+          <p class="text-lg sm:text-xl font-bold text-gray-100 tracking-wide font-sans">
+            बाबा रामापीर नर्सरी · चौहटन
           </p>
 
-          <p class="text-sm sm:text-base lg:text-lg text-emerald-50/90 max-w-2xl leading-relaxed font-light">
+          <p class="text-sm sm:text-base text-emerald-50/90 max-w-xl leading-relaxed font-light">
             हमारे यहाँ सभी प्रकार के फलदार, फूलदार, औषधीय और सजावटी पौधे उचित दामों पर उपलब्ध हैं। हमारा लक्ष्य है – 
             <span class="font-bold text-white">हर घर में हरियाली, हर दिल में खुशी।</span>
           </p>
 
-          <div class="pt-3 flex flex-wrap items-center gap-4">
-            <a href="#categories" class="flex items-center gap-2.5 bg-[#159e44] hover:bg-[#128639] text-white px-7 py-3.5 rounded-full font-bold shadow-lg shadow-black/20 hover:scale-105 transition transform">
+          <div class="pt-2 flex flex-wrap items-center gap-3">
+            <a href="#categories" class="flex items-center gap-2.5 bg-emerald-300 hover:bg-emerald-200 text-[#073b27] px-6 py-3 rounded-full font-bold shadow-lg shadow-black/20 hover:scale-105 transition transform">
               <i class="fa-solid fa-leaf text-base"></i>
               <span>हमारे पौधे देखें</span>
             </a>
-            <a href="#about" class="flex items-center gap-2.5 bg-black/50 hover:bg-black/70 backdrop-blur-md text-white border border-white/25 px-6 py-3.5 rounded-full font-semibold transition hover:border-white/50">
+            <a href="#contact" class="flex items-center gap-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-5 py-3 rounded-full font-semibold transition">
+              <i class="fa-solid fa-phone text-xs"></i>
+              <span>संपर्क करें</span>
+            </a>
+            <a href="#about" class="hidden sm:flex items-center gap-2 text-white/80 hover:text-emerald-300 px-2 py-3 font-semibold transition">
               <i class="fa-solid fa-circle-info text-base text-emerald-300"></i>
               <span>हमारे बारे में</span>
             </a>
           </div>
         </div>
 
-        <!-- Special Vermicompost Offer Badge Column -->
-        <div class="lg:col-span-4 flex flex-col items-center lg:items-end justify-center mt-6 lg:mt-0">
-          <div class="badge-tilt relative bg-amber-400 text-gray-900 px-6 py-5 rounded-2xl shadow-2xl border-4 border-amber-300 max-w-[280px] text-center">
-            <div class="absolute -top-3 -right-3 bg-red-600 text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow">
-              OFFER!
-            </div>
-            <p class="text-sm font-black text-amber-950 uppercase tracking-wider mb-1">
-              नर्सरी 20 पौधे पर
-            </p>
-            <div class="text-2xl sm:text-3xl font-black text-emerald-950 leading-tight">
-              1 Kg वर्मी कम्पोस्ट
-            </div>
-            <p class="text-2xl sm:text-3xl font-black text-emerald-900 mt-1 flex items-center justify-center gap-1.5">
-              <span>फ्री</span>
-              <i class="fa-solid fa-seedling text-xl text-emerald-800"></i>
-            </p>
-            <p class="text-[11px] text-amber-900 font-bold mt-1">शर्तें लागू • सीमित समय के लिए</p>
-          </div>
+        <div class="hidden lg:block lg:col-span-5 min-h-[300px]" aria-hidden="true"></div>
+      </div>
 
-          <!-- Handwritten style tagline -->
-          <div class="mt-8 text-right hidden sm:block">
-            <span class="font-hand text-white/90 text-3xl font-bold tracking-wider block drop-shadow-lg -rotate-3">
-              Green Today
-            </span>
-            <span class="font-hand text-emerald-300 text-3xl font-bold tracking-wider block drop-shadow-lg -rotate-3">
-              Better Tomorrow 🍃
-            </span>
+      <div class="absolute bottom-0 inset-x-0 border-t border-white/15 bg-[#083925]/70 backdrop-blur-sm px-6 sm:px-10 lg:px-12 py-5 sm:py-6">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-center">
+          <div class="border-r border-white/20 pr-3">
+            <p class="text-sm sm:text-base font-bold text-white">हर प्रकार के पौधे</p>
+            <p class="text-[11px] sm:text-xs text-emerald-100/75 mt-1">फलदार · फूलदार · औषधीय</p>
           </div>
+          <div class="lg:border-r border-white/20 lg:pr-3">
+            <p class="text-sm sm:text-base font-bold text-white">चौहटन, बाड़मेर</p>
+            <p class="text-[11px] sm:text-xs text-emerald-100/75 mt-1">आपकी अपनी स्थानीय नर्सरी</p>
+          </div>
+          <div class="hidden lg:block border-r border-white/20 pr-3">
+            <p class="text-sm sm:text-base font-bold text-white">पौधों की खास देखभाल</p>
+            <p class="text-[11px] sm:text-xs text-emerald-100/75 mt-1">सही पौधा चुनने में मदद</p>
+          </div>
+          <p class="col-span-2 lg:col-span-1 text-xs sm:text-sm text-emerald-50/85 leading-relaxed">
+            अपने घर और बगीचे के लिए हरियाली चुनें—हमसे पौधों की जानकारी लें।
+          </p>
         </div>
-
       </div>
     </div>
   </section>
@@ -620,15 +597,18 @@
             <!-- Phone -->
             <div class="flex items-center gap-2.5">
               <i class="fa-solid fa-phone text-brand-700 text-sm shrink-0"></i>
-              <a href="tel:8078667694" class="font-bold text-gray-900 hover:text-brand-700 transition">8078667694</a>
+              <div class="font-bold text-gray-900">
+                <a href="tel:8078667694" class="hover:text-brand-700 transition">8078667694</a> |
+                <a href="tel:9521519367" class="hover:text-brand-700 transition">9521519367</a> |
+                <a href="tel:9680122432" class="hover:text-brand-700 transition">9680122432</a>
+              </div>
             </div>
 
             <!-- WhatsApp -->
             <div class="flex items-center gap-2.5">
               <i class="fa-brands fa-whatsapp text-emerald-600 text-base shrink-0"></i>
               <div class="font-medium text-gray-800">
-                <a href="https://wa.me/919521519367" class="hover:text-emerald-700">9521519367</a> | 
-                <a href="https://wa.me/919680122432" class="hover:text-emerald-700">9680122432</a>
+                <a href="https://wa.me/918078667694" class="hover:text-emerald-700">8078667694</a>
               </div>
             </div>
 
@@ -644,14 +624,14 @@
           <!-- Embedded Google Map for the provided nursery location -->
           <div class="mt-4 rounded-xl overflow-hidden border border-gray-200 shadow-inner">
             <iframe 
-              src="https://maps.google.com/maps?q=25.5055508,71.0988229&z=17&output=embed" 
+              src="https://maps.google.com/maps?q=Baba+Ramapeer+Nursery%2C+Om+Banna+Mandir+ke+Samne%2C+Barmer+Road%2C+Chohtan%2C+Rajasthan%2C+India&ll=25.5055508%2C71.0988229&z=17&output=embed" 
               class="w-full h-32 border-0" 
               loading="lazy" 
               referrerpolicy="no-referrer-when-downgrade" 
               title="Baba Ramapeer Nursery Location Map">
             </iframe>
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=25.5055508%2C71.0988229" target="_blank" rel="noopener noreferrer" class="block bg-[#0e4422] text-white text-center py-2 text-xs font-bold hover:bg-brand-900 transition flex items-center justify-center gap-1.5">
-              <span>Google Maps पर देखें</span>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Baba%20Ramapeer%20Nursery%2C%20Om%20Banna%20Mandir%20ke%20Samne%2C%20Barmer%20Road%2C%20Chohtan%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener noreferrer" class="block bg-[#0e4422] text-white text-center py-2 text-xs font-bold hover:bg-brand-900 transition flex items-center justify-center gap-1.5">
+              <span>Google Maps पर बाबा रामापीर नर्सरी देखें</span>
               <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
           </div>
@@ -809,7 +789,197 @@
     </div>
   </section>
 
-  <!-- ================= 9. FOOTER ================= -->
+  <!-- ================= 9. REVIEWS & RATINGS ================= -->
+  <section id="reviews" class="py-16 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-bold text-brand-700 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full">YOUR FEEDBACK</span>
+        <h2 class="text-3xl font-extrabold text-gray-900 mt-3">Reviews & Rating</h2>
+        <p class="text-gray-600 mt-2">How was your experience at our nursery? Share your rating and review.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-6 items-start">
+        <div class="lg:col-span-2 bg-[#f7faf7] rounded-2xl border border-emerald-100 p-5 sm:p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Write a review</h3>
+          <form id="reviewForm" class="space-y-4">
+            <div>
+              <label for="reviewName" class="block text-sm font-semibold text-gray-700 mb-1">Your name</label>
+              <input id="reviewName" name="name" type="text" required maxlength="60" autocomplete="name" placeholder="Enter your name" class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-600 focus:outline-none">
+            </div>
+            <fieldset>
+              <legend class="block text-sm font-semibold text-gray-700 mb-2">Your rating <span class="text-red-600">*</span></legend>
+              <div class="flex items-center gap-1" role="radiogroup" aria-label="Choose a rating from 1 to 5 stars">
+                <label class="cursor-pointer"><input class="sr-only peer" type="radio" name="rating" value="1" required><span class="fa-solid fa-star text-2xl text-gray-300 peer-checked:text-amber-400 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-brand-700" aria-hidden="true"></span><span class="sr-only">1 star</span></label>
+                <label class="cursor-pointer"><input class="sr-only peer" type="radio" name="rating" value="2"><span class="fa-solid fa-star text-2xl text-gray-300 peer-checked:text-amber-400 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-brand-700" aria-hidden="true"></span><span class="sr-only">2 stars</span></label>
+                <label class="cursor-pointer"><input class="sr-only peer" type="radio" name="rating" value="3"><span class="fa-solid fa-star text-2xl text-gray-300 peer-checked:text-amber-400 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-brand-700" aria-hidden="true"></span><span class="sr-only">3 stars</span></label>
+                <label class="cursor-pointer"><input class="sr-only peer" type="radio" name="rating" value="4"><span class="fa-solid fa-star text-2xl text-gray-300 peer-checked:text-amber-400 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-brand-700" aria-hidden="true"></span><span class="sr-only">4 stars</span></label>
+                <label class="cursor-pointer"><input class="sr-only peer" type="radio" name="rating" value="5"><span class="fa-solid fa-star text-2xl text-gray-300 peer-checked:text-amber-400 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-brand-700" aria-hidden="true"></span><span class="sr-only">5 stars</span></label>
+              </div>
+            </fieldset>
+            <div>
+              <label for="reviewText" class="block text-sm font-semibold text-gray-700 mb-1">Your review</label>
+              <textarea id="reviewText" name="review" required maxlength="500" rows="4" placeholder="Tell us about our plants, service, or your experience" class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-600 focus:outline-none"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-brand-700 hover:bg-brand-800 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i> Submit review
+            </button>
+            <p id="reviewFormStatus" class="text-sm text-gray-600" role="status" aria-live="polite"></p>
+            <p class="text-xs text-gray-500">Reviews are currently saved only in this browser and are not published publicly.</p>
+          </form>
+        </div>
+
+        <div class="lg:col-span-3">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white rounded-2xl border border-gray-200 p-5 mb-4 shadow-sm">
+            <div>
+              <h3 class="font-bold text-gray-900 flex items-center gap-2"><i class="fa-brands fa-google text-brand-700"></i> Google Maps reviews</h3>
+              <p id="googleReviewStatus" class="text-sm text-gray-600 mt-1" role="status" aria-live="polite">Loading reviews from Google Maps…</p>
+            </div>
+            <a id="googleReviewsLink" href="https://www.google.com/maps/search/?api=1&amp;query=Baba%20Ramapeer%20Nursery%2C%20Om%20Banna%20Mandir%20ke%20Samne%2C%20Barmer%20Road%2C%20Chohtan%2C%20Rajasthan%2C%20India" target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex items-center justify-center gap-2 bg-[#0e4422] hover:bg-brand-900 text-white px-4 py-2.5 rounded-xl text-sm font-bold transition">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Google Maps
+            </a>
+          </div>
+          <div id="googleReviewSummary" class="hidden flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 bg-emerald-50 rounded-2xl p-5 mb-4">
+            <div class="text-center sm:text-left">
+              <p id="googleReviewAverage" class="text-4xl font-extrabold text-gray-900">—</p>
+              <div id="googleReviewAverageStars" class="text-amber-400 text-lg"></div>
+              <p id="googleReviewCount" class="text-sm text-gray-600 mt-1"></p>
+            </div>
+            <p id="googleReviewPlaceName" class="text-sm text-gray-600"></p>
+          </div>
+          <div id="googleReviewList" class="space-y-3 mb-8" aria-live="polite"></div>
+          <p class="text-right text-xs text-gray-500 mb-8"><a id="googleReviewAttribution" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" translate="no" class="font-semibold hover:underline">Google Maps</a></p>
+
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Website reviews saved in this browser</h3>
+          <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 bg-emerald-50 rounded-2xl p-5 mb-4">
+            <div class="text-center sm:text-left">
+              <p id="reviewAverage" class="text-4xl font-extrabold text-gray-900">—</p>
+              <div id="reviewAverageStars" class="text-amber-400 text-lg" aria-label="No ratings yet"></div>
+              <p id="reviewCount" class="text-sm text-gray-600 mt-1">No reviews yet</p>
+            </div>
+            <p class="text-sm text-gray-600">Your feedback helps us serve you better.</p>
+          </div>
+          <div id="reviewList" class="space-y-3" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 9. MEDICINE INFORMATION (LOCAL DEMO) ================= -->
+  <section id="medicine-info" class="py-16 bg-[#f7faf7] border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-8">
+        <span class="text-xs font-bold text-brand-700 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full">पौधों की देखभाल</span>
+        <h2 class="text-3xl font-extrabold text-gray-900 mt-3">पौधों की समस्या और देखभाल</h2>
+        <p class="text-gray-600 mt-2">मिट्टी, बढ़वार और कीट प्रबंधन के लिए उत्पादों का सरल परिचय। सही उपयोग के लिए हमेशा अपने product का label पढ़ें।</p>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 sm:p-5 mb-8">
+        <p class="font-bold text-amber-950 flex items-center gap-2"><i class="fa-solid fa-shield-halved"></i> उपयोग से पहले जरूरी बात</p>
+        <p class="text-sm text-amber-900 mt-1">साझा किए गए पोस्टरों में दिए गए सामान्य dose/spray schedule यहाँ दोहराए नहीं गए हैं। उत्पाद की concentration, formulation और फसल के अनुसार निर्देश बदलते हैं—पैक पर दिए गए approved crop/pest, मात्रा, तरीका, सुरक्षा और प्रतीक्षा अवधि का ही पालन करें। नीम तेल को तभी कीट नियंत्रण के लिए इस्तेमाल करें जब उसी formulation के label पर संबंधित कीट और पौधा लिखा हो।</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-5 mb-12">
+        <article data-medicine-card data-search="seaweed liquid समुद्री शैवाल धीमी बढ़वार कमजोर पौधा जड़ नई पत्तियां growth booster" class="grid grid-cols-[130px_minmax(0,1fr)] bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition group">
+          <div class="self-start overflow-hidden bg-green-50">
+            <img src="assets/seaweed-liquid-bottle.png" alt="सीवीड लिक्विड की बोतल" loading="lazy" class="block h-auto w-full">
+          </div>
+          <div class="p-3 sm:p-5">
+            <div class="flex items-start justify-between gap-3">
+              <div><h3 class="text-xl font-bold text-gray-900">Seaweed Liquid</h3><p class="text-sm text-brand-700 font-semibold">समुद्री शैवाल आधारित growth support</p></div>
+              <span class="w-10 h-10 shrink-0 rounded-full bg-emerald-50 text-brand-700 flex items-center justify-center"><i class="fa-solid fa-leaf"></i></span>
+            </div>
+            <div class="mt-4 space-y-3 text-sm">
+              <p><strong class="text-gray-900">कब विचार करें:</strong> पौधे की सामान्य बढ़वार धीमी हो या जड़ों/नई पत्तियों को सहारा देना हो—पहले पानी, रोशनी और मिट्टी की स्थिति भी जाँचें।</p>
+              <p class="text-gray-600"><strong class="text-gray-800">क्या करता है:</strong> seaweed-based growth support के रूप में बेचा जाता है; यह कीट या रोग का उपचार नहीं है।</p>
+            </div>
+            <p class="mt-4 rounded-lg bg-emerald-50 px-3 py-2 text-xs text-emerald-900"><i class="fa-solid fa-circle-info mr-1"></i> मात्रा और प्रयोग का तरीका केवल अपने उत्पाद के label से लें।</p>
+          </div>
+        </article>
+
+        <article data-medicine-card data-search="humic liquid ह्यूमिक लिक्विड मिट्टी soil health पोषक तत्व जड़ कमजोर मिट्टी" class="grid grid-cols-[130px_minmax(0,1fr)] bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition group">
+          <div class="self-start overflow-hidden bg-green-50">
+            <img src="assets/humic-liquid-bottle.png" alt="ह्यूमिक लिक्विड की बोतल" loading="lazy" class="block h-auto w-full">
+          </div>
+          <div class="p-3 sm:p-5">
+            <div class="flex items-start justify-between gap-3">
+              <div><h3 class="text-xl font-bold text-gray-900">Humic Liquid</h3><p class="text-sm text-brand-700 font-semibold">liquid soil health support</p></div>
+              <span class="w-10 h-10 shrink-0 rounded-full bg-amber-50 text-amber-800 flex items-center justify-center"><i class="fa-solid fa-seedling"></i></span>
+            </div>
+            <div class="mt-4 space-y-3 text-sm">
+              <p><strong class="text-gray-900">कब विचार करें:</strong> मिट्टी की गुणवत्ता या पोषक तत्वों के उपयोग को लेकर चिंता हो। पहले जल-निकास, मिट्टी और खाद की स्थिति जाँचें।</p>
+              <p class="text-gray-600"><strong class="text-gray-800">क्या करता है:</strong> humic liquid मिट्टी और nutrient uptake को सहारा देने के लिए बेचा जाता है; यह अपने-आप खाद या सही सिंचाई का विकल्प नहीं है।</p>
+            </div>
+            <p class="mt-4 rounded-lg bg-emerald-50 px-3 py-2 text-xs text-emerald-900"><i class="fa-solid fa-circle-info mr-1"></i> फसल, formulation और प्रयोग का तरीका label से मिलाएँ।</p>
+          </div>
+        </article>
+
+        <article data-medicine-card data-search="neem oil नीम ऑयल water soluble कीट pest insects फफूंद fungus" class="grid grid-cols-[130px_minmax(0,1fr)] bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition group">
+          <div class="self-start overflow-hidden bg-green-50">
+            <img src="assets/neem-oil-bottle.png" alt="नीम ऑयल की बोतल" loading="lazy" class="block h-auto w-full">
+          </div>
+          <div class="p-3 sm:p-5">
+            <div class="flex items-start justify-between gap-3">
+              <div><h3 class="text-xl font-bold text-gray-900">Neem Oil</h3><p class="text-sm text-brand-700 font-semibold">नीम ऑयल · water-soluble formulation</p></div>
+              <span class="w-10 h-10 shrink-0 rounded-full bg-lime-50 text-lime-800 flex items-center justify-center"><i class="fa-solid fa-bug-slash"></i></span>
+            </div>
+            <div class="mt-4 space-y-3 text-sm">
+              <p><strong class="text-gray-900">कब विचार करें:</strong> पौधे पर कीट दिखें और उस खास पौधे/कीट के लिए आपके product का label उपयोग की अनुमति देता हो।</p>
+              <p class="text-gray-600"><strong class="text-gray-800">क्या करता है:</strong> कुछ neem formulations के label में खास कीटों के लिए उपयोग लिखा होता है। हर neem oil एक जैसा नहीं होता; इसे हर कीट या फफूंद का उपचार न मानें।</p>
+            </div>
+            <p class="mt-4 rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-950"><i class="fa-solid fa-triangle-exclamation mr-1"></i> खाने योग्य फसल, मधुमक्खियों और spraying safety के निर्देश label से जाँचें।</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 mb-5">
+        <div>
+          <h3 class="text-2xl font-bold text-gray-900">अपनी जानकारी जोड़ें</h3>
+          <p class="text-sm text-gray-600 mt-1">अपने product का सही उपयोग और आधिकारिक नियम/label साझा करें।</p>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-6 items-start">
+        <form id="medicineForm" class="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 sm:p-6 space-y-4">
+          <div>
+            <label for="medicineName" class="block text-sm font-semibold text-gray-700 mb-1">दवाई / उत्पाद का नाम *</label>
+            <input id="medicineName" name="medicineName" required maxlength="120" class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-600 focus:outline-none" placeholder="उत्पाद का नाम">
+          </div>
+          <div>
+            <label for="medicineTarget" class="block text-sm font-semibold text-gray-700 mb-1">किस पौधे या समस्या के लिए? *</label>
+            <input id="medicineTarget" name="medicineTarget" required maxlength="180" class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-600 focus:outline-none" placeholder="पौधे का नाम / समस्या">
+          </div>
+          <div>
+            <label for="medicineUse" class="block text-sm font-semibold text-gray-700 mb-1">उपयोग / लगाने का तरीका *</label>
+            <textarea id="medicineUse" name="medicineUse" required maxlength="1200" rows="3" class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-600 focus:outline-none" placeholder="केवल product label या विशेषज्ञ की पुष्टि के अनुसार जानकारी लिखें"></textarea>
+          </div>
+          <div>
+            <label for="medicineRules" class="block text-sm font-semibold text-gray-700 mb-1">नियम, सावधानियाँ और label निर्देश *</label>
+            <textarea id="medicineRules" name="medicineRules" required maxlength="1200" rows="3" class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-600 focus:outline-none" placeholder="सुरक्षा, उपयोग की सीमाएँ, प्रतीक्षा अवधि या आधिकारिक निर्देश"></textarea>
+          </div>
+          <div>
+            <label for="medicineFile" class="block text-sm font-semibold text-gray-700 mb-1">Label / नियम की PDF या तस्वीर (वैकल्पिक)</label>
+            <input id="medicineFile" name="medicineFile" type="file" accept=".pdf,image/png,image/jpeg,image/webp" class="w-full text-sm text-gray-600 file:mr-3 file:rounded-lg file:border-0 file:bg-emerald-50 file:px-3 file:py-2 file:font-semibold file:text-brand-700">
+            <p class="text-xs text-gray-500 mt-1">एक PDF या तस्वीर, अधिकतम 750 KB।</p>
+          </div>
+          <button id="medicineSubmit" type="submit" class="w-full bg-brand-700 hover:bg-brand-800 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-upload"></i> जानकारी सेव करें
+          </button>
+          <p id="medicineFormStatus" class="text-sm text-gray-600" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="space-y-4">
+          <div class="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+            <h3 class="text-xl font-bold text-gray-900">अन्य उत्पाद जानकारी</h3>
+            <input id="medicineSearch" type="search" aria-label="दवाई की जानकारी खोजें" placeholder="नाम, पौधा या समस्या खोजें" class="w-full sm:max-w-xs px-3.5 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-600 focus:outline-none">
+          </div>
+          <p id="medicineListStatus" class="text-sm text-gray-500" role="status" aria-live="polite"></p>
+          <div id="medicineList" class="space-y-3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 10. FOOTER ================= -->
   <footer class="bg-[#051f0f] text-white pt-12 pb-8 border-t border-emerald-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -817,19 +987,7 @@
       <div class="flex flex-col md:flex-row justify-between items-center pb-8 border-b border-white/10 gap-6">
         
         <!-- Logo -->
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full border border-emerald-500/40 bg-emerald-900/50 flex items-center justify-center p-1.5">
-            <svg viewBox="0 0 48 48" class="w-full h-full text-emerald-400" fill="currentColor">
-              <path d="M24 4C13 4 4 13 4 24c0 9 6 16.5 14.5 18.9.2-.8.5-1.9.9-3.2C12.5 37 8 31 8 24 8 15.2 15.2 8 24 8c7.3 0 13.5 5 15.3 11.8 1.4-.4 2.8-.7 4.2-.8C41.3 10.5 33.4 4 24 4z"/>
-              <path d="M24 12c-6.6 0-12 5.4-12 12 0 4.2 2.2 7.9 5.5 10 .8-2.6 2-5.4 3.7-8 1.7-2.6 3.8-4.8 6.3-6.5-1.1-4.3-1.8-6.5-3.5-7.5zm11.2 5.5c-4.2 2.2-7.5 5.7-9.5 9.5-2 3.8-2.7 7.7-2.7 11.5 5.5-.3 10.4-2.8 13.7-6.8 1.4-1.7 2.3-3.7 2.8-5.7-1.3-3.2-2.7-6-4.3-8.5z"/>
-            </svg>
-          </div>
-          <div>
-            <span class="text-lg font-black tracking-tight text-white block">BABA RAMAPEER</span>
-            <span class="text-[10px] tracking-widest text-emerald-400 font-bold uppercase -mt-1 block">NURSERY</span>
-            <span class="text-[9px] text-gray-400">हरियाली से खुशहाली</span>
-          </div>
-        </div>
+        <img src="assets/baba-ramapeer-nursery-logo.jpg" alt="बाबा रामापीर नर्सरी लोगो" class="w-16 h-16 rounded-full object-cover">
 
         <!-- Links -->
         <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-300 font-medium">
@@ -840,6 +998,8 @@
           <a href="#categories" class="hover:text-emerald-400 transition">Plants</a>
           <span class="text-white/20">•</span>
           <a href="#gallery" class="hover:text-emerald-400 transition">Gallery</a>
+          <span class="text-white/20">•</span>
+          <a href="#reviews" class="hover:text-emerald-400 transition">Reviews</a>
           <span class="text-white/20">•</span>
           <a href="#popular" class="hover:text-emerald-400 transition">Blog</a>
           <span class="text-white/20">•</span>
@@ -864,7 +1024,11 @@
       <div class="py-6 flex flex-wrap justify-center lg:justify-between items-center text-xs text-gray-400 gap-4 text-center lg:text-left">
         <div class="flex items-center gap-2">
           <i class="fa-solid fa-phone text-emerald-400"></i>
-          <span>8078667694 | 9521519367 | 9680122432</span>
+          <span>
+            <a href="tel:8078667694" class="hover:text-emerald-400 transition">8078667694</a> |
+            <a href="tel:9521519367" class="hover:text-emerald-400 transition">9521519367</a> |
+            <a href="tel:9680122432" class="hover:text-emerald-400 transition">9680122432</a>
+          </span>
         </div>
         <div class="flex items-center gap-2">
           <i class="fa-solid fa-location-dot text-emerald-400"></i>
@@ -950,7 +1114,7 @@
 
   <!-- ================= 12. FLOATING ACTION BUTTONS (MOBILE) ================= -->
   <div class="fixed bottom-5 right-5 z-40 flex flex-col gap-2.5 sm:hidden">
-    <a href="https://wa.me/919521519367" class="w-12 h-12 rounded-full bg-[#25D366] text-white shadow-xl flex items-center justify-center text-2xl active:scale-95 transition" aria-label="WhatsApp">
+    <a href="https://wa.me/918078667694" class="w-12 h-12 rounded-full bg-[#25D366] text-white shadow-xl flex items-center justify-center text-2xl active:scale-95 transition" aria-label="WhatsApp">
       <i class="fa-brands fa-whatsapp"></i>
     </a>
     <a href="tel:8078667694" class="w-12 h-12 rounded-full bg-[#062612] text-white shadow-xl flex items-center justify-center text-lg active:scale-95 transition" aria-label="Call Now">
@@ -960,6 +1124,159 @@
 
   <!-- ================= SCRIPT ================= -->
   <script>
+    const medicineStorageKey = 'babaRamapeerMedicineInfo';
+    const medicineFileMaxBytes = 750 * 1024;
+
+    function getMedicineEntries() {
+      const rawEntries = localStorage.getItem(medicineStorageKey);
+      if (!rawEntries) return [];
+      const entries = JSON.parse(rawEntries);
+      if (!Array.isArray(entries)) throw new Error('सेव की गई जानकारी का format सही नहीं है।');
+      return entries;
+    }
+
+    function renderMedicineEntries() {
+      const list = document.getElementById('medicineList');
+      const status = document.getElementById('medicineListStatus');
+      const query = document.getElementById('medicineSearch').value.trim().toLocaleLowerCase();
+      const productCards = Array.from(document.querySelectorAll('[data-medicine-card]'));
+      list.replaceChildren();
+
+      let entries;
+      try {
+        entries = getMedicineEntries();
+      } catch (error) {
+        status.textContent = `जानकारी पढ़ी नहीं जा सकी: ${error.message}`;
+        return;
+      }
+
+      const filteredEntries = entries.filter(entry =>
+        [entry.name, entry.target, entry.use, entry.rules].some(value => value.toLocaleLowerCase().includes(query))
+      );
+      const matchingProducts = productCards.filter(card => {
+        const matches = `${card.dataset.search} ${card.textContent}`.toLocaleLowerCase().includes(query);
+        card.classList.toggle('hidden', !matches);
+        return matches;
+      });
+      const totalMatches = matchingProducts.length + filteredEntries.length;
+      status.textContent = query
+        ? totalMatches
+          ? `${totalMatches} परिणाम मिले: ${matchingProducts.length} सुझाए गए उत्पाद और ${filteredEntries.length} साझा की गई जानकारी।`
+          : 'इस खोज के लिए कोई जानकारी नहीं मिली।'
+        : `${productCards.length} सुझाए गए उत्पाद · ${entries.length} साझा की गई जानकारी`;
+
+      filteredEntries.forEach(entry => {
+        const card = document.createElement('article');
+        card.className = 'bg-white rounded-xl border border-gray-100 shadow-sm p-4 sm:p-5';
+
+        const title = document.createElement('h4');
+        title.className = 'text-lg font-bold text-gray-900';
+        title.textContent = entry.name;
+        card.append(title);
+
+        const target = document.createElement('p');
+        target.className = 'text-sm text-brand-700 font-semibold mt-1';
+        target.textContent = `पौधा / समस्या: ${entry.target}`;
+        card.append(target);
+
+        [['उपयोग', entry.use], ['नियम और सावधानियाँ', entry.rules]].forEach(([label, value]) => {
+          const detail = document.createElement('p');
+          detail.className = 'text-sm text-gray-600 mt-3 whitespace-pre-wrap';
+          const strong = document.createElement('strong');
+          strong.className = 'text-gray-800';
+          strong.textContent = `${label}: `;
+          detail.append(strong, document.createTextNode(value));
+          card.append(detail);
+        });
+
+        if (entry.file && entry.file.dataUrl) {
+          const fileLink = document.createElement('a');
+          fileLink.className = 'inline-flex items-center gap-2 mt-3 text-sm font-semibold text-brand-700 hover:text-brand-900 underline';
+          fileLink.href = entry.file.dataUrl;
+          fileLink.download = entry.file.name;
+          fileLink.textContent = `संलग्न label/नियम खोलें: ${entry.file.name}`;
+          fileLink.target = '_blank';
+          fileLink.rel = 'noopener noreferrer';
+          card.append(fileLink);
+        }
+
+        const removeButton = document.createElement('button');
+        removeButton.type = 'button';
+        removeButton.className = 'mt-4 text-sm font-semibold text-red-700 hover:text-red-900';
+        removeButton.textContent = 'यह जानकारी हटाएँ';
+        removeButton.addEventListener('click', () => removeMedicineEntry(entry.id));
+        card.append(removeButton);
+        list.append(card);
+      });
+
+    }
+
+    function readMedicineFile(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve({ name: file.name, dataUrl: reader.result });
+        reader.onerror = () => reject(new Error('चुनी हुई file पढ़ी नहीं जा सकी।'));
+        reader.readAsDataURL(file);
+      });
+    }
+
+    document.getElementById('medicineForm').addEventListener('submit', async event => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const status = document.getElementById('medicineFormStatus');
+      const submitButton = document.getElementById('medicineSubmit');
+      const selectedFile = document.getElementById('medicineFile').files[0];
+
+      if (selectedFile && selectedFile.size > medicineFileMaxBytes) {
+        status.textContent = 'File 750 KB से बड़ी है। छोटी PDF या तस्वीर चुनें।';
+        return;
+      }
+      if (selectedFile && !['application/pdf', 'image/png', 'image/jpeg', 'image/webp'].includes(selectedFile.type)) {
+        status.textContent = 'केवल PDF, PNG, JPEG या WebP file जोड़ें।';
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.classList.add('opacity-60', 'cursor-not-allowed');
+      status.textContent = 'जानकारी सेव हो रही है...';
+      try {
+        const entries = getMedicineEntries();
+        const entry = {
+          id: `${Date.now()}-${Math.random().toString(36).slice(2)}`,
+          name: document.getElementById('medicineName').value.trim(),
+          target: document.getElementById('medicineTarget').value.trim(),
+          use: document.getElementById('medicineUse').value.trim(),
+          rules: document.getElementById('medicineRules').value.trim(),
+          file: selectedFile ? await readMedicineFile(selectedFile) : null
+        };
+        entries.unshift(entry);
+        localStorage.setItem(medicineStorageKey, JSON.stringify(entries));
+        form.reset();
+        status.textContent = 'जानकारी इस browser में सेव हो गई।';
+        renderMedicineEntries();
+      } catch (error) {
+        status.textContent = `जानकारी सेव नहीं हो सकी: ${error.message || 'browser storage उपलब्ध नहीं है।'}`;
+      } finally {
+        submitButton.disabled = false;
+        submitButton.classList.remove('opacity-60', 'cursor-not-allowed');
+      }
+    });
+
+    function removeMedicineEntry(id) {
+      if (!window.confirm('क्या आप यह जानकारी इस browser से हटाना चाहते हैं?')) return;
+      try {
+        const entries = getMedicineEntries().filter(entry => entry.id !== id);
+        localStorage.setItem(medicineStorageKey, JSON.stringify(entries));
+        renderMedicineEntries();
+        document.getElementById('medicineFormStatus').textContent = 'जानकारी हटा दी गई।';
+      } catch (error) {
+        document.getElementById('medicineListStatus').textContent = `जानकारी हटाई नहीं जा सकी: ${error.message}`;
+      }
+    }
+
+    document.getElementById('medicineSearch').addEventListener('input', renderMedicineEntries);
+    renderMedicineEntries();
+
     const nurseryPlants = [
       { name: "आम का पौधा (Mango Plant)", cat: "फलदार", avail: true },
       { name: "अमरूद का पौधा (Guava Plant)", cat: "फलदार", avail: true },
@@ -1128,6 +1445,84 @@
       menu.classList.toggle('hidden');
     }
 
+    const heroSlides = [
+      { src: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=2000&auto=format&fit=crop', alt: 'सजावटी और इंडोर पौधे' },
+      { src: 'https://images.unsplash.com/photo-1616844868137-7ffaf43c2d80?q=80&w=2000&auto=format&fit=crop', alt: 'नर्सरी में खिले हुए रंग-बिरंगे फूल' },
+      { src: 'https://images.unsplash.com/photo-1622955658214-d05c1c6fcf84?q=80&w=2000&auto=format&fit=crop', alt: 'फलदार पौधे और आम' },
+      { src: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=2000&auto=format&fit=crop', alt: 'हरी-भरी नर्सरी और पौधे' }
+    ];
+    let activeHeroSlide = 0;
+    let heroSlideRequest = 0;
+    let heroSlideTimer;
+    const heroSlideImage = document.getElementById('heroSlideImage');
+    const heroSlideDots = document.getElementById('heroSlideDots');
+    const heroSection = document.getElementById('home');
+
+    heroSlides.forEach((slide, index) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'w-2.5 h-2.5 rounded-full border border-white/80 transition-all';
+      dot.setAttribute('aria-label', `तस्वीर ${index + 1} दिखाएँ`);
+      dot.addEventListener('click', () => showHeroSlide(index));
+      heroSlideDots.append(dot);
+    });
+
+    function updateHeroSlideDots() {
+      Array.from(heroSlideDots.children).forEach((dot, index) => {
+        const isActive = index === activeHeroSlide;
+        dot.classList.toggle('bg-white', isActive);
+        dot.classList.toggle('bg-white/40', !isActive);
+        dot.classList.toggle('scale-125', isActive);
+        dot.setAttribute('aria-current', isActive ? 'true' : 'false');
+      });
+    }
+
+    function showHeroSlide(index) {
+      activeHeroSlide = (index + heroSlides.length) % heroSlides.length;
+      updateHeroSlideDots();
+      if (heroSlides[activeHeroSlide].src === heroSlideImage.src) return;
+
+      const requestId = ++heroSlideRequest;
+      const nextImage = new Image();
+      nextImage.onload = () => {
+        if (requestId !== heroSlideRequest) return;
+        heroSlideImage.classList.add('opacity-0');
+        setTimeout(() => {
+          if (requestId !== heroSlideRequest) return;
+          heroSlideImage.src = nextImage.src;
+          heroSlideImage.alt = heroSlides[activeHeroSlide].alt;
+          requestAnimationFrame(() => heroSlideImage.classList.remove('opacity-0'));
+        }, 250);
+      };
+      nextImage.onerror = () => {
+        if (requestId === heroSlideRequest) {
+          heroSlideDots.children[activeHeroSlide].setAttribute('aria-label', `तस्वीर ${activeHeroSlide + 1} लोड नहीं हो सकी`);
+        }
+      };
+      nextImage.src = heroSlides[activeHeroSlide].src;
+    }
+
+    function changeHeroSlide(direction) {
+      showHeroSlide(activeHeroSlide + direction);
+    }
+
+    function startHeroSlideTimer() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || heroSlideTimer) return;
+      heroSlideTimer = window.setInterval(() => changeHeroSlide(1), 5000);
+    }
+
+    function stopHeroSlideTimer() {
+      window.clearInterval(heroSlideTimer);
+      heroSlideTimer = null;
+    }
+
+    updateHeroSlideDots();
+    startHeroSlideTimer();
+    heroSection.addEventListener('mouseenter', stopHeroSlideTimer);
+    heroSection.addEventListener('mouseleave', startHeroSlideTimer);
+    heroSection.addEventListener('focusin', stopHeroSlideTimer);
+    heroSection.addEventListener('focusout', startHeroSlideTimer);
+
     function scrollSection(id) {
       const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -1188,9 +1583,206 @@
 
       const text = `नमस्ते बाबा रामापीर नर्सरी (चौहटन),%0A%0Aमुझे इस पौधे की जानकारी चाहिए:%0A🌱 *पौधा:* ${encodeURIComponent(plant)}%0A👤 *नाम:* ${encodeURIComponent(name)}%0A📞 *मोबाइल:* ${encodeURIComponent(phone)}%0A💬 *संदेश:* ${encodeURIComponent(msg || 'कृपया रेट और उपलब्धता बताएं।')}`;
       
-      window.open(`https://wa.me/919521519367?text=${text}`, '_blank');
+      window.open(`https://wa.me/918078667694?text=${text}`, '_blank');
       closeInquiryModal();
     }
+
+    const reviewStorageKey = 'babaRamapeerReviews';
+    const reviewForm = document.getElementById('reviewForm');
+    const reviewStatus = document.getElementById('reviewFormStatus');
+    function updateReviewRatingStars() {
+      const selectedRatingInput = reviewForm.querySelector('input[name="rating"]:checked');
+      const selectedRating = selectedRatingInput ? Number(selectedRatingInput.value) : 0;
+      reviewForm.querySelectorAll('input[name="rating"]').forEach(input => {
+        const star = input.nextElementSibling;
+        star.classList.toggle('text-amber-400', Number(input.value) <= selectedRating);
+        star.classList.toggle('text-gray-300', Number(input.value) > selectedRating);
+      });
+    }
+
+    reviewForm.querySelectorAll('input[name="rating"]').forEach(ratingInput => {
+      ratingInput.addEventListener('change', updateReviewRatingStars);
+    });
+
+    function loadReviews() {
+      const savedReviews = localStorage.getItem(reviewStorageKey);
+      if (!savedReviews) return [];
+
+      const reviews = JSON.parse(savedReviews);
+      if (!Array.isArray(reviews) || reviews.some(review =>
+        !review || typeof review.name !== 'string' || typeof review.text !== 'string' ||
+        !Number.isInteger(review.rating) || review.rating < 1 || review.rating > 5 ||
+        typeof review.date !== 'string'
+      )) {
+        throw new Error('Saved reviews have an invalid format.');
+      }
+      return reviews;
+    }
+
+    function renderGoogleReviews(data) {
+      const summary = document.getElementById('googleReviewSummary');
+      const reviewList = document.getElementById('googleReviewList');
+      const status = document.getElementById('googleReviewStatus');
+      const reviewLink = document.getElementById('googleReviewsLink');
+      const mapsLink = data.googleMapsUri || reviewLink.href;
+      reviewLink.href = mapsLink;
+      document.getElementById('googleReviewAttribution').href = mapsLink;
+      document.getElementById('googleReviewPlaceName').textContent = data.name;
+      document.getElementById('googleReviewAverage').textContent =
+        typeof data.rating === 'number' ? data.rating.toFixed(1) : '—';
+      document.getElementById('googleReviewAverageStars').textContent = typeof data.rating === 'number'
+        ? `${'★'.repeat(Math.round(data.rating))}${'☆'.repeat(5 - Math.round(data.rating))}`
+        : '';
+      document.getElementById('googleReviewAverageStars').setAttribute('aria-label',
+        typeof data.rating === 'number' ? `Google rating: ${data.rating.toFixed(1)} out of 5 stars` : 'No Google rating available');
+      document.getElementById('googleReviewCount').textContent =
+        `${data.userRatingCount} Google rating${data.userRatingCount === 1 ? '' : 's'}`;
+      summary.classList.remove('hidden');
+      summary.classList.add('flex');
+      reviewList.replaceChildren();
+
+      if (!data.reviews.length) {
+        const emptyMessage = document.createElement('p');
+        emptyMessage.className = 'text-gray-500 bg-white border border-gray-200 rounded-xl p-5 text-center';
+        emptyMessage.textContent = 'Google has no written reviews for this listing yet.';
+        reviewList.append(emptyMessage);
+      }
+
+      data.reviews.forEach(review => {
+        const card = document.createElement('article');
+        card.className = 'bg-white border border-gray-200 rounded-xl p-4 shadow-sm';
+        const header = document.createElement('div');
+        header.className = 'flex flex-wrap items-center justify-between gap-2';
+        const author = document.createElement(review.authorAttribution?.uri ? 'a' : 'span');
+        author.className = 'font-bold text-gray-900';
+        author.textContent = review.authorAttribution?.displayName || 'Google Maps user';
+        if (review.authorAttribution?.uri) {
+          author.href = review.authorAttribution.uri;
+          author.target = '_blank';
+          author.rel = 'noopener noreferrer';
+        }
+        const rating = Number(review.rating);
+        const stars = document.createElement('span');
+        stars.className = 'text-amber-400';
+        stars.setAttribute('aria-label', `${rating} out of 5 stars`);
+        stars.textContent = `${'★'.repeat(rating)}${'☆'.repeat(5 - rating)}`;
+        const reviewText = document.createElement('p');
+        reviewText.className = 'text-sm text-gray-600 mt-2 whitespace-pre-wrap';
+        reviewText.textContent = review.text?.text || review.originalText?.text || '';
+        const date = document.createElement('p');
+        date.className = 'text-xs text-gray-400 mt-2';
+        date.textContent = review.relativePublishTimeDescription || '';
+        header.append(author, stars);
+        card.append(header, reviewText, date);
+        reviewList.append(card);
+      });
+
+      status.textContent = `Loaded ${data.reviews.length} Google review${data.reviews.length === 1 ? '' : 's'}. Google provides up to five reviews.`;
+    }
+
+    async function loadGoogleReviews() {
+      const status = document.getElementById('googleReviewStatus');
+      try {
+        const response = await fetch('/.netlify/functions/google-reviews', { cache: 'no-store' });
+        const result = await response.json();
+        if (!response.ok) {
+          throw new Error(result.error || 'Google reviews could not be loaded.');
+        }
+        renderGoogleReviews(result);
+      } catch (error) {
+        status.textContent = `${error.message} Use the button to view reviews on Google Maps.`;
+        console.error('Unable to load Google Maps reviews:', error);
+      }
+    }
+
+    function renderReviews() {
+      const reviewList = document.getElementById('reviewList');
+      const reviews = loadReviews();
+      const average = reviews.length
+        ? reviews.reduce((total, review) => total + review.rating, 0) / reviews.length
+        : 0;
+
+      document.getElementById('reviewAverage').textContent = reviews.length ? average.toFixed(1) : '—';
+      document.getElementById('reviewAverageStars').textContent = reviews.length
+        ? `${'★'.repeat(Math.round(average))}${'☆'.repeat(5 - Math.round(average))}`
+        : '';
+      document.getElementById('reviewAverageStars').setAttribute('aria-label', reviews.length
+        ? `Average rating: ${average.toFixed(1)} out of 5 stars`
+        : 'No ratings yet');
+      document.getElementById('reviewCount').textContent = reviews.length
+        ? `${reviews.length} review${reviews.length === 1 ? '' : 's'}`
+        : 'No reviews yet';
+      reviewList.replaceChildren();
+
+      if (reviews.length === 0) {
+        const emptyMessage = document.createElement('p');
+        emptyMessage.className = 'text-gray-500 bg-white border border-gray-200 rounded-xl p-5 text-center';
+        emptyMessage.textContent = 'There are no reviews yet. Be the first to write one!';
+        reviewList.append(emptyMessage);
+        return;
+      }
+
+      reviews.slice().reverse().forEach(review => {
+        const card = document.createElement('article');
+        card.className = 'bg-white border border-gray-200 rounded-xl p-4 shadow-sm';
+        const header = document.createElement('div');
+        header.className = 'flex flex-wrap items-center justify-between gap-2';
+        const reviewerName = document.createElement('h4');
+        reviewerName.className = 'font-bold text-gray-900';
+        reviewerName.textContent = review.name;
+        const stars = document.createElement('span');
+        stars.className = 'text-amber-400';
+        stars.setAttribute('aria-label', `${review.rating} out of 5 stars`);
+        stars.textContent = `${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}`;
+        const reviewText = document.createElement('p');
+        reviewText.className = 'text-sm text-gray-600 mt-2 whitespace-pre-wrap';
+        reviewText.textContent = review.text;
+        const date = document.createElement('p');
+        date.className = 'text-xs text-gray-400 mt-2';
+        date.textContent = review.date;
+        header.append(reviewerName, stars);
+        card.append(header, reviewText, date);
+        reviewList.append(card);
+      });
+    }
+
+    reviewForm.addEventListener('submit', event => {
+      event.preventDefault();
+      reviewStatus.textContent = '';
+      try {
+        const formData = new FormData(reviewForm);
+        const name = formData.get('name').trim();
+        const text = formData.get('review').trim();
+        if (!name || !text) {
+          reviewStatus.textContent = 'Please enter your name and review.';
+          return;
+        }
+        const reviews = loadReviews();
+        reviews.push({
+          name,
+          rating: Number(formData.get('rating')),
+          text,
+          date: new Intl.DateTimeFormat('en-IN', { dateStyle: 'medium' }).format(new Date())
+        });
+        localStorage.setItem(reviewStorageKey, JSON.stringify(reviews));
+        reviewForm.reset();
+        updateReviewRatingStars();
+        reviewStatus.textContent = 'Thank you! Your review has been saved on this device.';
+        renderReviews();
+      } catch (error) {
+        reviewStatus.textContent = 'Your review could not be saved. Check that browser storage is available and try again.';
+        console.error('Unable to save or display nursery review:', error);
+      }
+    });
+
+    try {
+      renderReviews();
+    } catch (error) {
+      reviewStatus.textContent = 'Saved reviews could not be loaded. Check your browser storage settings.';
+      console.error('Unable to load nursery reviews:', error);
+    }
+
+    loadGoogleReviews();
 
     window.addEventListener('click', function(e) {
       const modal1 = document.getElementById('inquiryModal');
